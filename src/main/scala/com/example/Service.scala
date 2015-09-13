@@ -1,6 +1,7 @@
 package com.example
 
 import akka.actor.Actor
+import spray.http.MediaTypes.`application/json`
 import spray.routing._
 
 class ServiceActor extends Actor with Service {
@@ -11,9 +12,13 @@ class ServiceActor extends Actor with Service {
 trait Service extends HttpService {
 
   val route =
-    path("") {
+    path("items" / IntNumber) { id =>
       get {
-        complete("Hi")
+        respondWithMediaType(`application/json`) {
+          complete {
+            "{\"id\": " + id + "}"
+          }
+        }
       }
     }
 
