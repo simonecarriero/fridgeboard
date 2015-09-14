@@ -8,3 +8,4 @@ deploy:
   app: fridgeboard-app
   on:
     repo: simonecarriero/fridgeboard
+  skip_cleanup: true
