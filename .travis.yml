@@ -1,3 +1,10 @@
 language: scala
 scala:
    - 2.11.6
+deploy:
+  provider: heroku
+  api_key:
+    secure: VtLgFEG8KIW9Vjo2OtyH/F1qpojeDpVQ7qbLiMwTiaz1Pa3WHaJ0KJ/6TS0YOQPhKw5ZfU1ocg8MG8rTR8jVboY99AHfs7H83sKTvY3dtH6H9x8UntvOyULP2h+0YMnXkUTD/YExBjxmWP6lBrWIlZdNKYPwgDbFS24qlmmdYo1DEtTSrUjIpr2UZ3TGnGcqpc3XwlsV0C7Pj386GgOLJWewrdhqbHpLpTDilYQNqatbRafo1ysnZSy0UEomYFanrSp8YBjeW/NLGEbVyI/EWGFjj6FSuKxDlBs1CYtK/majPIBA0XsNnx4GyDdgoOVjX1zuLzG8qYsXMlPNWxJn9nRu4UdFU0prwZHy59MiuNRuTEHUjzAAR06PQM7yRENXwYnaWShNArtBdDsVt08vnY74pucgaJcICwI/pL1l8L9WSNiPl7rkg2EZtjUMVW3PRWeokO0bmxLEhGHQb7dNaD90VY3hHAK/Bz1Gn5yvO1nMuL7BxT26KQJZL+kJlCqp1UfrHadz4uCxIyhZKzt2WNXlEsj3A5xLOXMxoL7Ez9kWAZTIak2OU+nsGV5YoyyOi/N4NGZ6We9D5RkYCux+aDCqoP+M7P97BXr/Rl58Idk96YUKb9m8nM8Odm3lZiKJNY0IUGVEmthT/wWdcuL7AGugLX7qb6Ahi/ewhUD6hHk=
+  app: fridgeboard-app
+  on:
+    repo: simonecarriero/fridgeboard
