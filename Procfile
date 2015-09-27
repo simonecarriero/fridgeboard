@@ -1,2 +1,1 @@
-web: env > .env; env GEM_HOME=$HOME/.ruby-gems env PATH=PATH:$HOME/.ruby-gems/bin foreman start -f ProcfileFreeTier
-
+web: target/universal/stage/bin/scala_buildpack_build_dir -Dhttp.port=$PORT
