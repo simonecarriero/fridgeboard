@@ -12,5 +12,6 @@ object Boot extends App {
   implicit val system = ActorSystem("fridgeboard")
   val service = system.actorOf(Props[ServiceActor], "service")
   implicit val timeout = Timeout(5.seconds)
-  IO(Http) ? Http.Bind(service, interface = "localhost", port = 8081)
+  val port = sys.env.get("PORT").getOrElse("8080").toInt
+  IO(Http) ? Http.Bind(service, "0.0.0.0", port = port)
 }
